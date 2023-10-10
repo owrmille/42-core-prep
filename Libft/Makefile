@@ -2,7 +2,10 @@ FILES = ft_isalpha \
 		ft_isdigit \
 		ft_isalnum \
 		ft_isascii \
-		ft_isprint
+		ft_isprint \
+		ft_strlen \
+		ft_memset \
+		ft_bzero
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 INCLS = libft.h
