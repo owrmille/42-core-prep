@@ -2,28 +2,28 @@
 
 int	ft_atoi(char	*str)
 {
-	int	sign_flg;
+	int	sign_val;
 	int	number;
 
-	sign_flg = 0;
+	sign_val = 1;
 	number = 0;
 	while ((*str >= 9 && *str <= 13) || *str == 32)
+	{
 		str++;
-	while (*str == '+' || *str == '-')
+	}
+	if (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
 		{
-			sign_flg++;
+			sign_val = -1;
 		}
 		str++;
 	}
-	while (*str >= 48 && *str <= 57)
+	while (*str >= '0' && *str <= '9')
 	{
 		number *= 10;
 		number += *str - 48;
 		str++;
 	}
-	if (!(sign_flg % 2))
-		return (number);
-	return (-number);
+	return (sign_val * number);
 }

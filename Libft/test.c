@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "libft.h"
 
@@ -29,16 +30,20 @@ int	main()
 	// printf("%s\n", str);
 
 	//ft_bzero
-	char *str;
-	str = strdup("hello");
-	ft_bzero(str, 3);
-	printf("ft_bzero: %s\n", str);
-	/////
-	char *str2;
-	str2 = strdup("hello");
-	bzero(str2, 1);
-	printf("bzero: %s\n", str2);
-
+	// char *str;
+	// str = strdup("hello");
+	// ft_bzero(str, 3);
+	// printf("ft_bzero: %s\n", str);
+	// /////
+	// char *str2;
+	// str2 = strdup("hello");
+	// bzero(str2, 1);
+	// printf("bzero: %s\n", str2);
+	
+	//ft_atoi
+	char	*str = " 	-2147483649a";
+	printf("ft_atoi: (%d)\n", ft_atoi(str));
+	printf("atoi: (%d)\n", atoi(str));
 
 	return (0);
 }
