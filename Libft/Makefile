@@ -5,7 +5,8 @@ FILES = ft_isalpha \
 		ft_isprint \
 		ft_strlen \
 		ft_memset \
-		ft_bzero
+		ft_bzero \
+		ft_strdup
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 INCLS = libft.h
