@@ -6,6 +6,7 @@ FILES = ft_isalpha \
 		ft_strlen \
 		ft_memset \
 		ft_bzero \
+		ft_atoi \
 		ft_strdup
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
