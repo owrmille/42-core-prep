@@ -1,3 +1,4 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,10 +13,51 @@ P.S.
 -L. tells the linker to look for libraries in the current directory, 
 and -lmylib links with "libmylib.a" (or "mylib.lib" on Windows).
 */
+
+typedef int (*FunctionCallback)(int);
+FunctionCallback int_ft_functions[] = {&ft_isalpha,
+								&ft_isdigit,
+								&ft_isalnum,
+								&ft_isascii,
+								&ft_isprint,
+								&ft_toupper,
+								&ft_tolower};
+
+typedef int (*FunctionCallback)(int);
+FunctionCallback int_orig_functions[] = {&isalpha, 
+								&isdigit,
+								&isalnum,
+								&isascii,
+								&isprint,
+								&toupper,
+								&tolower};
+
 int	main()
 {
-	// ft_isalpha
-	// printf("Is '1' alpha? %d\n", ft_isalpha('1'));
+	int var = 97;
+
+	const int	funcs_num = 7;
+	char	*funcs_names[funcs_num] = {"isalpha",
+					"isdigit",
+					"isalnum",
+					"isascii",
+					"isprint",
+					"toupper",
+					"tolower"};
+	int i = 0;
+	printf("\nVariable: %d or %c\n\n", var, var);
+	while (i < funcs_num)
+	{
+		printf("Function: %s, Result: %d", 
+				funcs_names[i], int_ft_functions[i](var));
+		if (strcmp(funcs_names[i], "toupper") == 0 || strcmp(funcs_names[i], "tolower") == 0)
+			printf(" or %c", int_ft_functions[i](var));
+		if (int_ft_functions[i](var) == int_orig_functions[i](var))
+			printf("\nSUCCESS: original and ft results matched!\n\n");
+		else
+			printf("\nFAIL: check your ft function.\n\n");
+		i++;
+	}
 	
 	// ft_strlen
 	// printf("Length of 'meow': %d\n", ft_strlen("meow"));
@@ -39,11 +81,11 @@ int	main()
 	// str2 = strdup("hello");
 	// bzero(str2, 1);
 	// printf("bzero: %s\n", str2);
-	
+
 	//ft_atoi
-	char	*str = " 	-2147483649a";
-	printf("ft_atoi: (%d)\n", ft_atoi(str));
-	printf("atoi: (%d)\n", atoi(str));
+	// char	*str = " 	-2147483649a";
+	// printf("ft_atoi: (%d)\n", ft_atoi(str));
+	// printf("atoi: (%d)\n", atoi(str));
 
 	return (0);
 }

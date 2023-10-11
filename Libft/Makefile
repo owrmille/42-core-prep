@@ -6,6 +6,8 @@ FILES = ft_isalpha \
 		ft_strlen \
 		ft_memset \
 		ft_bzero \
+		ft_toupper \
+		ft_tolower \
 		ft_atoi \
 		ft_strdup
 CC = cc
