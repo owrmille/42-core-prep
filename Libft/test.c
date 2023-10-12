@@ -34,30 +34,29 @@ FunctionCallback int_orig_functions[] = {&isalpha,
 
 int	main()
 {
-	int var = 97;
-
-	const int	funcs_num = 7;
-	char	*funcs_names[funcs_num] = {"isalpha",
-					"isdigit",
-					"isalnum",
-					"isascii",
-					"isprint",
-					"toupper",
-					"tolower"};
-	int i = 0;
-	printf("\nVariable: %d or %c\n\n", var, var);
-	while (i < funcs_num)
-	{
-		printf("Function: %s, Result: %d", 
-				funcs_names[i], int_ft_functions[i](var));
-		if (strcmp(funcs_names[i], "toupper") == 0 || strcmp(funcs_names[i], "tolower") == 0)
-			printf(" or %c", int_ft_functions[i](var));
-		if (int_ft_functions[i](var) == int_orig_functions[i](var))
-			printf("\nSUCCESS: original and ft results matched!\n\n");
-		else
-			printf("\nFAIL: check your ft function.\n\n");
-		i++;
-	}
+	// int var = 97;
+	// const int	funcs_num = 7;
+	// char	*funcs_names[funcs_num] = {"isalpha",
+	// 				"isdigit",
+	// 				"isalnum",
+	// 				"isascii",
+	// 				"isprint",
+	// 				"toupper",
+	// 				"tolower"};
+	// int i = 0;
+	// printf("\nVariable: %d or %c\n\n", var, var);
+	// while (i < funcs_num)
+	// {
+	// 	printf("Function: %s, Result: %d", 
+	// 			funcs_names[i], int_ft_functions[i](var));
+	// 	if (strcmp(funcs_names[i], "toupper") == 0 || strcmp(funcs_names[i], "tolower") == 0)
+	// 		printf(" or %c", int_ft_functions[i](var));
+	// 	if (int_ft_functions[i](var) == int_orig_functions[i](var))
+	// 		printf("\nSUCCESS: original and ft results matched!\n\n");
+	// 	else
+	// 		printf("\nFAIL: check your ft function.\n\n");
+	// 	i++;
+	// }
 	
 	// ft_strlen
 	// printf("Length of 'meow': %d\n", ft_strlen("meow"));
@@ -81,6 +80,12 @@ int	main()
 	// str2 = strdup("hello");
 	// bzero(str2, 1);
 	// printf("bzero: %s\n", str2);
+
+	// ft_strncmp
+	char s1[] = "ABD";
+	char s2[] = "ABF";
+	printf("ft_strncmp: (%d)\n", ft_strncmp(s1, s2, 3));
+	printf("strncmp: (%d)\n", strncmp(s1, s2, 3));
 
 	//ft_atoi
 	// char	*str = " 	-2147483649a";

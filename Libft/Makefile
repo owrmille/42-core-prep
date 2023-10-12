@@ -8,6 +8,7 @@ FILES = ft_isalpha \
 		ft_bzero \
 		ft_toupper \
 		ft_tolower \
+		ft_strncmp \
 		ft_atoi \
 		ft_strdup
 CC = cc
