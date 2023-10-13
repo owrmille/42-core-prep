@@ -32,6 +32,7 @@ FunctionCallback int_orig_functions[] = {&isalpha,
 								&toupper,
 								&tolower};
 
+// write a function for strcmp(function_name, "isalpha"
 
 int	main(int argc, char **argv)
 {
@@ -96,6 +97,19 @@ int	main(int argc, char **argv)
 			str2 = strdup("hello");
 			bzero(str2, 1);
 			printf("bzero: %s\n", str2);
+		}
+		else if (!strcmp(function_name, "memcpy"))
+		{
+			char dst[] = "yes";
+			char src[] = "no";
+			printf("src [%s]; dest [%s]\n", src, dst);
+			ft_memcpy(dst, src, 2);
+			printf("ft_memcpy [%s]\n", dst);
+
+			char dst2[] = "yes";
+			char src2[] = "no";
+			memcpy(dst2, src2, 2);
+			printf("memcpy [%s]\n", dst2);
 		}
 		else if (!strcmp(function_name, "strncmp"))
 		{
