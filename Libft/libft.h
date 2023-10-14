@@ -12,6 +12,7 @@ int	ft_strlen(char	*str);
 void	*ft_memset(void	*b, int c, size_t len);
 void	ft_bzero(void	*s, size_t n);
 void	*ft_memcpy(void	*restrict dst, const void	*restrict src, size_t n);
+void	*ft_memmove(void	*dst, const void	*src, size_t len);
 int	ft_toupper(int c);
 int	ft_tolower(int c);
 int	ft_strncmp(char	*s1, char	*s2, unsigned int n);

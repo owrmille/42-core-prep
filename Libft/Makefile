@@ -7,6 +7,7 @@ FILES = ft_isalpha \
 		ft_memset \
 		ft_bzero \
 		ft_memcpy \
+		ft_memmove \
 		ft_toupper \
 		ft_tolower \
 		ft_strncmp \

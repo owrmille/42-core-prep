@@ -100,29 +100,57 @@ int	main(int argc, char **argv)
 		}
 		else if (!strcmp(function_name, "memcpy"))
 		{
-			char dst[] = "yes";
-			char src[] = "no";
-			printf("src [%s]; dest [%s]\n", src, dst);
-			ft_memcpy(dst, src, 2);
-			printf("ft_memcpy [%s]\n", dst);
+			// char src[] = "no";
+			// char dst[] = "yes";
+			// printf("src [%s]; dest [%s]\n", src, dst);
+			// ft_memcpy(dst, src, 2);
+			// printf("ft_memcpy [%s]\n", dst);
 
-			char dst2[] = "yes";
-			char src2[] = "no";
-			memcpy(dst2, src2, 2);
-			printf("memcpy [%s]\n", dst2);
+			// char src2[] = "no";
+			// char dst2[] = "yes";
+			char data[6] = "Privet";
+			char *src2 = data;
+			char *dst2 = data + 2;
+			ft_memcpy(dst2, src2, 3);
+			printf("memcpy [%s]\n", data);
+		}
+		else if (!strcmp(function_name, "memmove"))
+		{
+			// char src[] = "abcd";
+			// char dst[] = "cd000";
+			// printf("src [%s]; dest [%s]\n", src, dst);
+			// ft_memcpy(dst, src, 2);
+			// printf("ft_memcpy [%s]\n", dst);
+
+
+			// char data[6] = "Privet";
+			// char *src2 = data;
+			// char *dst2 = data + 2;
+			// ft_memmove(dst2, src2, 3);
+			// printf("memmove [%s]\n", data);
+			char string [] = "stackoverflow";
+			char *first, *second;
+			first = string;
+			second = string;
+
+			puts(string);
+			memcpy(first+5, first, 5);
+			puts(first);
+			memmove(second+5, second, 5);
+			puts(second);
 		}
 		else if (!strcmp(function_name, "strncmp"))
 		{
-			char s1[] = "ABD";
-			char s2[] = "ABF";
-			printf("ft_strncmp: (%d)\n", ft_strncmp(s1, s2, 3));
-			printf("strncmp: (%d)\n", strncmp(s1, s2, 3));
+			char *s1 = "test?";
+			char *s2 = "test\0";
+			printf("ft_strncmp: (%d)\n", ft_strncmp(s1, s2, 6));
+			printf("strncmp: (%d)\n", strncmp(s1, s2, 6));
 		}
 		else if (!strcmp(function_name, "atoi"))
 		{
-		char	*str = " 	-2147483649a";
-		printf("ft_atoi: (%d)\n", ft_atoi(str));
-		printf("atoi: (%d)\n", atoi(str));
+			char	*str = " 	-2147483649a";
+			printf("ft_atoi: (%d)\n", ft_atoi(str));
+			printf("atoi: (%d)\n", atoi(str));
 		}
 
 	}
