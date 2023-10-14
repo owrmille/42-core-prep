@@ -146,6 +146,22 @@ int	main(int argc, char **argv)
 			printf("ft_strncmp: (%d)\n", ft_strncmp(s1, s2, 6));
 			printf("strncmp: (%d)\n", strncmp(s1, s2, 6));
 		}
+		else if (!strcmp(function_name, "memchr"))
+		{
+			const int c = '.';
+			const char str[] = "hfbj.12.=-+";
+			size_t n = 9;
+			// const int c = '\0';
+			// const char str[] = "potatoes";
+			
+			const char *ret;
+			ret = memchr(str, c, n);
+			printf("memchr: (%s)\n", ret);
+
+			const char *ft_ret;
+			ft_ret = ft_memchr(str, c, n);
+			printf("ft_memchr: (%s)\n", ft_ret);
+		}
 		else if (!strcmp(function_name, "atoi"))
 		{
 			char	*str = " 	-2147483649a";

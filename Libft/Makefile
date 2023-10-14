@@ -11,6 +11,7 @@ FILES = ft_isalpha \
 		ft_toupper \
 		ft_tolower \
 		ft_strncmp \
+		ft_memchr \
 		ft_atoi \
 		ft_strdup
 CC = cc
