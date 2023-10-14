@@ -162,6 +162,16 @@ int	main(int argc, char **argv)
 			ft_ret = ft_memchr(str, c, n);
 			printf("ft_memchr: (%s)\n", ft_ret);
 		}
+		else if (!strcmp(function_name, "memcmp"))
+		{
+			const char *s1 = "ABC";
+			const char *s2 = "ABD";
+			size_t n = 6;
+			// const char *s1 = "test?";
+			// const char *s2 = "test\0";
+			printf("ft_memcmp: (%d)\n", ft_memcmp(s1, s2, n));
+			printf("memcmp: (%d)\n", memcmp(s1, s2, n));
+		}
 		else if (!strcmp(function_name, "atoi"))
 		{
 			char	*str = " 	-2147483649a";
