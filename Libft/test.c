@@ -147,6 +147,20 @@ int	main(int argc, char **argv)
 			printf("ft_strlcpy: (%s), (%lu)\n", dst, ft_strlcpy(dst, src, n));
 			printf("strlcpy: (%s), (%lu)\n", dst, strlcpy(dst, src, n));
 		}
+		else if (!strcmp(function_name, "strlcat"))
+		{
+			// char	*src = "Office";
+			// char	dst[50] = "Best series: ";
+			char *src = "test12345";
+			char dst[50] = "aaaaaaaaaa\0\0\0\0\0\0\0\0\0\0";
+			printf("ft_strlcat: (%s), (%lu)\n", dst, ft_strlcat(dst, src, 20));
+
+			// char	*src2 = "Office";
+			// char	dst2[50] = "Best series: ";
+			char *src2 = "test12345";
+			char dst2[50] = "aaaaaaaaaa\0\0\0\0\0\0\0\0\0\0";
+			printf("strlcat: (%s), (%lu)\n", dst2, strlcat(dst2, src2, 20));
+		}
 		else if (!strcmp(function_name, "strncmp"))
 		{
 			char *s1 = "test?";
