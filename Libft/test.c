@@ -139,6 +139,14 @@ int	main(int argc, char **argv)
 			memmove(second+5, second, 5);
 			puts(second);
 		}
+		else if (!strcmp(function_name, "strlcpy"))
+		{
+			char	*src = "Office";
+			char	dst[20];
+			size_t	n = 6;
+			printf("ft_strlcpy: (%s), (%lu)\n", dst, ft_strlcpy(dst, src, n));
+			printf("strlcpy: (%s), (%lu)\n", dst, strlcpy(dst, src, n));
+		}
 		else if (!strcmp(function_name, "strncmp"))
 		{
 			char *s1 = "test?";
