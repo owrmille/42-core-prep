@@ -10,6 +10,7 @@ FILES = ft_isalpha \
 		ft_memmove \
 		ft_strlcpy \
 		ft_strlcat \
+		ft_strchr \
 		ft_toupper \
 		ft_tolower \
 		ft_strncmp \

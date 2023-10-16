@@ -161,6 +161,25 @@ int	main(int argc, char **argv)
 			char dst2[50] = "aaaaaaaaaa\0\0\0\0\0\0\0\0\0\0";
 			printf("strlcat: (%s), (%lu)\n", dst2, strlcat(dst2, src2, 20));
 		}
+		else if (!strcmp(function_name, "strchr"))
+		{
+			// const int c = '.';
+			// const char str[] = "hfbj.12.=-+";
+			// const int c = '\0';
+			// const char str[] = "potatoes";
+			const int c = 'a' + 256;
+			const char str[] = "abc";
+			// const int c = '\0';
+			// void *str = NULL;
+			
+			const char *ret;
+			ret = strchr(str, c);
+			printf("strchr: (%s)\n", ret);
+
+			const char *ft_ret;
+			ft_ret = ft_strchr(str, c);
+			printf("ft_strchr: (%s)\n", ft_ret);
+		}
 		else if (!strcmp(function_name, "strncmp"))
 		{
 			char *s1 = "test?";
