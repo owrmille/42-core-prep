@@ -240,6 +240,14 @@ int	main(int argc, char **argv)
 			printf("ft_memcmp: (%d)\n", ft_memcmp(s1, s2, n));
 			printf("memcmp: (%d)\n", memcmp(s1, s2, n));
 		}
+		else if (!strcmp(function_name, "strnstr"))
+		{
+			char	*str = "Code, Sleep, Repeat or just Sleep?";
+			char	*substr = "eep";
+			
+			printf("ft_strnstr: (%s)\n", ft_strnstr(str, substr, 100));
+			printf("strnstr: (%s)\n", strnstr(str, substr, 100));
+		}
 		else if (!strcmp(function_name, "atoi"))
 		{
 			char	*str = " 	-2147483649a";
