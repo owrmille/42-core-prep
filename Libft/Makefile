@@ -19,6 +19,7 @@ FILES = ft_isalpha \
 		ft_memcmp \
 		ft_strnstr \
 		ft_atoi \
+		ft_calloc \
 		ft_strdup
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
