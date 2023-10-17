@@ -180,6 +180,33 @@ int	main(int argc, char **argv)
 			ft_ret = ft_strchr(str, c);
 			printf("ft_strchr: (%s)\n", ft_ret);
 		}
+		else if (!strcmp(function_name, "strrchr"))
+		{
+			// const int c = '.';
+			// const char str[] = "h.12.=-+";
+			// const int c = '\0';
+			// const char str[] = "potatoes";
+			const int c = 'a' + 256;
+			const char str[] = "abc";
+
+			// this case below does not work (segmentation fault: 11) - fix this!
+			// const int c = '\0';
+			// void *str = NULL;
+
+			const char *ret;
+			ret = strrchr(str, c);
+			printf("strrchr: (%s)\n", ret);
+
+			const char *ft_ret;
+			ft_ret = ft_strrchr(str, c);
+			printf("ft_strrchr: (%s)\n", ft_ret);
+			if (ret == ft_ret)
+			{
+				printf("OK!");
+			}
+			else
+				printf("nope...");
+		}
 		else if (!strcmp(function_name, "strncmp"))
 		{
 			char *s1 = "test?";

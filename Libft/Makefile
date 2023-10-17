@@ -11,6 +11,7 @@ FILES = ft_isalpha \
 		ft_strlcpy \
 		ft_strlcat \
 		ft_strchr \
+		ft_strrchr \
 		ft_toupper \
 		ft_tolower \
 		ft_strncmp \
