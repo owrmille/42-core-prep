@@ -39,10 +39,22 @@ int	main(int argc, char **argv)
 			printf("string: (%s), start: (%d), len: (%zu)\n", s1, start, len);
 			printf("ft_substr: (%s)\n", res);
 		}
-		// else if (!strcmp(function_name, "strlen"))
-		// {
-		// 	printf("ft_strncmp: (%d)\n", ft_strncmp(s1, s2, 6));
-		// }
+		if (!strcmp(function_name, "ft_strjoin"))
+		{
+			char	*s1 = "Join me ";
+			char	*s2 = "please";
+			char	*res = ft_strjoin(s1, s2);
+			if (!res)
+			{
+				return (0);
+			}
+			if (res)
+			{
+				free(res);
+			}
+			printf("string 1: (%s), string 2: (%s)\n", s1, s2);
+			printf("ft_strjoin: (%s)\n", res);
+		}
 	}
 	return (0);
 }
