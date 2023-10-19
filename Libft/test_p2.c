@@ -32,14 +32,14 @@ int	main(int argc, char **argv)
 			{
 				return (0);
 			}
+			printf("string: (%s), start: (%d), len: (%zu)\n", s1, start, len);
+			printf("ft_substr: (%s)\n", res);
 			if (res)
 			{
 				free(res);
 			}
-			printf("string: (%s), start: (%d), len: (%zu)\n", s1, start, len);
-			printf("ft_substr: (%s)\n", res);
 		}
-		if (!strcmp(function_name, "ft_strjoin"))
+		else if (!strcmp(function_name, "ft_strjoin"))
 		{
 			char	*s1 = "Join me ";
 			char	*s2 = "please";
@@ -48,12 +48,28 @@ int	main(int argc, char **argv)
 			{
 				return (0);
 			}
+			printf("string 1: (%s), string 2: (%s)\n", s1, s2);
+			printf("ft_strjoin: (%s)\n", res);
 			if (res)
 			{
 				free(res);
 			}
-			printf("string 1: (%s), string 2: (%s)\n", s1, s2);
-			printf("ft_strjoin: (%s)\n", res);
+		}
+		else if (!strcmp(function_name, "ft_strtrim"))
+		{
+			char	*s1 = "***_!!wow! *omg*_";
+			char	*set = "*!_";
+			char	*res = ft_strtrim(s1, set);
+			if (!res)
+			{
+				return (0);
+			}
+			printf("string: (%s), set: (%s)\n", s1, set);
+			printf("ft_strtrim: (%s)\n", res);
+			if (res)
+			{
+				free(res);
+			}
 		}
 	}
 	return (0);
