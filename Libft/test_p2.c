@@ -13,6 +13,10 @@ P.S.
 -L. tells the linker to look for libraries in the current directory, 
 and -lmylib links with "libmylib.a" (or "mylib.lib" on Windows).
 */
+char map_func(unsigned int index, char c)
+{
+	return (index % 2 == 0) ? '_' : c;
+}
 
 int	main(int argc, char **argv)
 {
@@ -66,6 +70,23 @@ int	main(int argc, char **argv)
 			}
 			printf("string: (%s), set: (%s)\n", s1, set);
 			printf("ft_strtrim: (%s)\n", res);
+			if (res)
+			{
+				free(res);
+			}
+		}
+		else if (!strcmp(function_name, "ft_strmapi"))
+		{
+			// char *s = "123456789";
+			// char *s = NULL;
+			// char *s = "\0";
+			char s[] = "123456789";
+			char *res = ft_strmapi(s, map_func);
+			if (!res)
+			{
+				return (0);
+			}
+			printf("ft_strmapi: (%s)\n", res);
 			if (res)
 			{
 				free(res);

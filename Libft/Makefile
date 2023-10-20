@@ -23,7 +23,8 @@ FILES = ft_isalpha \
 		ft_strdup \
 		ft_substr \
 		ft_strjoin \
-		ft_strtrim
+		ft_strtrim \
+		ft_strmapi
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 INCLS = libft.h
