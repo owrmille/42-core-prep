@@ -26,7 +26,8 @@ FILES = ft_isalpha \
 		ft_strtrim \
 		ft_strmapi \
 		ft_putchar_fd \
-		ft_putstr_fd
+		ft_putstr_fd \
+		ft_putendl_fd
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 INCLS = libft.h
