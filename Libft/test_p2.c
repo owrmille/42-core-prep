@@ -18,6 +18,12 @@ char map_func(unsigned int index, char c)
 	return (index % 2 == 0) ? '_' : c;
 }
 
+void	iter_func(unsigned int index, char *c)
+{
+	if (index % 2 == 0)
+		*c = '+';
+}
+
 int	main(int argc, char **argv)
 {
 	if (argc == 2)
@@ -77,10 +83,10 @@ int	main(int argc, char **argv)
 		}
 		else if (!strcmp(function_name, "ft_strmapi"))
 		{
-			// char *s = "123456789";
+			// char *s = "0123456789";
 			// char *s = NULL;
 			// char *s = "\0";
-			char s[] = "123456789";
+			char s[] = "0123456789";
 			char *res = ft_strmapi(s, map_func);
 			if (!res)
 			{
@@ -91,6 +97,15 @@ int	main(int argc, char **argv)
 			{
 				free(res);
 			}
+		}
+		else if (!strcmp(function_name, "ft_striteri"))
+		{
+			// char *s = "0123456789";
+			// char *s = NULL;
+			// char *s = "\0";
+			char s[] = "0123456789";
+			ft_striteri(s, iter_func);
+			printf("ft_striteri: (%s)\n", s);
 		}
 	}
 	return (0);
