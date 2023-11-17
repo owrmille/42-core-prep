@@ -7,7 +7,7 @@
 /* How to test:
 $make
 $cc -Wall -Wextra -Werror -o test test_p1.c -L. -lft
-$./test
+$./test <function_name>
 
 P.S.
 -L. tells the linker to look for libraries in the current directory, 

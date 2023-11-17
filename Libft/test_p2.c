@@ -81,6 +81,34 @@ int	main(int argc, char **argv)
 				free(res);
 			}
 		}
+		else if (!strcmp(function_name, "ft_split"))
+		{
+			char *s = "__0123_45_678__9_";
+			// char *s = "111";
+			// char *s = "";
+			// char *s = NULL;
+			// char *s = "\0";
+
+			char c = '_';
+			// char c = "";
+			char **res = ft_split(s, c);
+
+			printf("initial string: (%s)\nft_split:\n", s);
+			if (!res)
+			{
+				return (0);
+			}
+			int i = 0;
+			while (res[i])
+			{
+				printf("(%s)\n", res[i]);
+				i++;
+			}
+			if (res)
+			{
+				free(res);
+			}
+		}
 		else if (!strcmp(function_name, "ft_strmapi"))
 		{
 			// char *s = "0123456789";
