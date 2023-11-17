@@ -186,8 +186,10 @@ int	main(int argc, char **argv)
 			// const char str[] = "h.12.=-+";
 			// const int c = '\0';
 			// const char str[] = "potatoes";
-			const int c = 'a' + 256;
-			const char str[] = "abc";
+			// const int c = 'a' + 256;
+			// const char str[] = "abc";
+			const int c = '4';
+			const char str[] = "4321";
 
 			// this case below does not work (segmentation fault: 11) - fix this!
 			// const int c = '\0';
@@ -202,10 +204,10 @@ int	main(int argc, char **argv)
 			printf("ft_strrchr: (%s)\n", ft_ret);
 			if (ret == ft_ret)
 			{
-				printf("OK!");
+				printf("OK!\n");
 			}
 			else
-				printf("nope...");
+				printf("WRONG...\n");
 		}
 		else if (!strcmp(function_name, "strncmp"))
 		{
