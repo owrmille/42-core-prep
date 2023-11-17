@@ -1,7 +1,8 @@
 #include <ctype.h>
+#include <limits.h>
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+// #include <stdlib.h>
+// #include <string.h>
 #include "libft.h"
 
 /* How to test:
@@ -108,6 +109,28 @@ int	main(int argc, char **argv)
 			{
 				free(res);
 			}
+		}
+		else if (!strcmp(function_name, "ft_itoa"))
+		{
+			// int n = -42;
+			// int n = 1234560;
+			// int n = 0;
+			// int n = INT_MAX;
+			int n = INT_MIN;
+			char	*res = ft_itoa(n);
+			if (!res)
+			{
+				return (0);
+			}
+			printf("n: (%d)\n", n);
+			printf("ft_itoa: (%s)\n", res);
+			if (res)
+			{
+				free(res);
+			}
+
+			int x = -12340;
+			printf("as usual: (%d), with tilda: (%d)", -x%10, ~(x%10));
 		}
 		else if (!strcmp(function_name, "ft_strmapi"))
 		{
