@@ -116,7 +116,8 @@ int	main(int argc, char **argv)
 			// int n = 1234560;
 			// int n = 0;
 			// int n = INT_MAX;
-			int n = INT_MIN;
+			// int n = INT_MIN;
+			int n = -1234;
 			char	*res = ft_itoa(n);
 			if (!res)
 			{
@@ -124,13 +125,12 @@ int	main(int argc, char **argv)
 			}
 			printf("n: (%d)\n", n);
 			printf("ft_itoa: (%s)\n", res);
+			
+			printf("Diff: (%d)\n", strcmp(res, "-1234"));
 			if (res)
 			{
 				free(res);
 			}
-
-			int x = -12340;
-			printf("as usual: (%d), with tilda: (%d)", -x%10, ~(x%10));
 		}
 		else if (!strcmp(function_name, "ft_strmapi"))
 		{
