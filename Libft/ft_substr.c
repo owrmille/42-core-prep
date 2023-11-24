@@ -15,10 +15,13 @@ char	*ft_substr(char const	*s, unsigned int start, size_t len)
 		return (NULL);
 	}
 	i = 0;
-	while (str[start + i] != '\0' && i < len && ft_strlen(str) > (int)(start + i))
+	if (start < (unsigned int)ft_strlen(str))
 	{
-		substr[i] = str[start + i];
-		i++;
+		while (str[start + i] != '\0' && i < len && ft_strlen(str) > (int)(start + i))
+		{
+			substr[i] = str[start + i];
+			i++;
+		}
 	}
 	substr[i] = '\0';
 	return (substr);

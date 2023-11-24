@@ -12,9 +12,8 @@ char	*ft_strrchr(const char	*s, int c)
 	while (len >= 0)
 	{
 		if (*(res+len) == (char)symbol)
-			return (res + len);
+			return ((char *)res + len);
 		len--;
 	}
 	return (NULL);
-
 }
