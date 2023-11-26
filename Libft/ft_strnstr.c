@@ -2,32 +2,22 @@
 
 char	*ft_strnstr(const char	*str, const char	*substr, size_t len)
 {
-	int	count_str;
-	int	count_sub;
-	int	match_flg;
-	char	*s = (char *)str;
-	char	*subs = (char *)substr;
+	size_t i;
+	size_t j;
 
-	count_str = 0;
-	count_sub = 0;
-	match_flg = 0;
-	if (subs[0] == '\0')
-		return (s);
-	while (s[count_str] && len > 0)
+	i = 0;
+	if (substr[0] == '\0' )
+		return ((char *)str);
+	while (str[i] && i < len)
 	{
-		count_sub = 0;
-		while (s[count_str + count_sub] == subs[count_sub] && len > 0)
+		j = 0;
+		while (str[i + j] == substr[j] && i + j < len)
 		{
-			match_flg = 1;
-			if (subs[count_sub + 1] == '\0')
-				return (s + count_str);
-			count_sub++;
-			len--;
+			if (substr[j + 1] == '\0')
+				return((char *)str + i);
+			j++;
 		}
-		count_str++;
-		if (match_flg == 0)
-			len--;
-		match_flg = 0;
+		i++;
 	}
 	return (NULL);
 }
