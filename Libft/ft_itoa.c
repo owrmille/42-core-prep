@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iatopchu <iatopchu@student.42berlin.de>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/27 14:02:23 by iatopchu          #+#    #+#             */
+/*   Updated: 2023/11/27 14:09:00 by iatopchu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	length_val(int val)
@@ -9,8 +21,8 @@ int	length_val(int val)
 		return (1);
 	else if (val < 0)
 		len++;
-		val *= -1;
-	while(val != 0)
+	val *= -1;
+	while (val != 0)
 	{
 		val /= 10;
 		len++;
@@ -20,7 +32,7 @@ int	length_val(int val)
 
 char	*ft_itoa(int n)
 {
-	int len;
+	int		len;
 	char	*str;
 
 	len = length_val(n);

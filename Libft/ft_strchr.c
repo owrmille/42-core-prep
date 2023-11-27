@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iatopchu <iatopchu@student.42berlin.de>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/27 14:01:37 by iatopchu          #+#    #+#             */
+/*   Updated: 2023/11/27 14:16:50 by iatopchu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strchr(const char	*s, int c)
@@ -13,5 +25,5 @@ char	*ft_strchr(const char	*s, int c)
 			return (NULL);
 		res++;
 	}
-	return res;
+	return (res);
 }

@@ -1,15 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iatopchu <iatopchu@student.42berlin.de>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/27 14:01:42 by iatopchu          #+#    #+#             */
+/*   Updated: 2023/11/27 14:16:23 by iatopchu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	count_words(char const	*s, char c)
 {
-	int words_cnt;
-	int i;
-	int prev_del;
+	int	words_cnt;
+	int	i;
+	int	prev_del;
 
 	words_cnt = 0;
 	prev_del = 1;
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		if (s[i] == c)
 			prev_del = 1;
@@ -24,7 +36,7 @@ int	count_words(char const	*s, char c)
 
 int	protect_malloc(char	**words_v, int position, size_t buffer)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	words_v[position] = malloc(buffer);
@@ -43,8 +55,8 @@ int	protect_malloc(char	**words_v, int position, size_t buffer)
 
 int	fill_v(char	**words_v, char const	*s, char c)
 {
-	int position;
-	size_t len;
+	int		position;
+	size_t	len;
 
 	position = 0;
 	while (*s)
@@ -70,7 +82,7 @@ int	fill_v(char	**words_v, char const	*s, char c)
 
 char	**ft_split(char const	*s, char c)
 {
-	int words_cnt;
+	int		words_cnt;
 	char	**words_v;
 
 	if (s == NULL)
@@ -82,5 +94,5 @@ char	**ft_split(char const	*s, char c)
 	words_v[words_cnt] = NULL;
 	if (fill_v(words_v, s, c))
 		return (NULL);
-	return(words_v);
+	return (words_v);
 }
