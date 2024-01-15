@@ -6,13 +6,13 @@
 /*   By: iatopchu <iatopchu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 14:01:42 by iatopchu          #+#    #+#             */
-/*   Updated: 2023/11/27 14:16:23 by iatopchu         ###   ########.fr       */
+/*   Updated: 2023/11/28 14:55:25 by iatopchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const	*s, char c)
+static int	count_words(char const	*s, char c)
 {
 	int	words_cnt;
 	int	i;
@@ -34,7 +34,7 @@ int	count_words(char const	*s, char c)
 	return (words_cnt);
 }
 
-int	protect_malloc(char	**words_v, int position, size_t buffer)
+static int	protect_malloc(char	**words_v, int position, size_t buffer)
 {
 	int	i;
 
@@ -53,7 +53,7 @@ int	protect_malloc(char	**words_v, int position, size_t buffer)
 	return (0);
 }
 
-int	fill_v(char	**words_v, char const	*s, char c)
+static int	fill_v(char	**words_v, char const	*s, char c)
 {
 	int		position;
 	size_t	len;

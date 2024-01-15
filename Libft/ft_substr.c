@@ -6,7 +6,7 @@
 /*   By: iatopchu <iatopchu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 14:00:35 by iatopchu          #+#    #+#             */
-/*   Updated: 2023/11/27 16:01:46 by iatopchu         ###   ########.fr       */
+/*   Updated: 2024/01/15 21:42:01 by iatopchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	s_len = ft_strlen(s);
 	if (start >= s_len)
-		return (ft_strdup(""));
+		return (NULL);
 	subs_len = s_len - start;
 	if (len > subs_len)
 		len = subs_len;

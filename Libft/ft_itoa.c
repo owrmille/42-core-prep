@@ -6,13 +6,13 @@
 /*   By: iatopchu <iatopchu@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 14:02:23 by iatopchu          #+#    #+#             */
-/*   Updated: 2023/11/27 14:09:00 by iatopchu         ###   ########.fr       */
+/*   Updated: 2023/11/28 14:46:51 by iatopchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	length_val(int val)
+static int	length_val(int val)
 {
 	int	len;
 
